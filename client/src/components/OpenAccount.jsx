@@ -82,7 +82,7 @@ function OpenAccount() {
         <div className="account-created">
           <h1>Account created! Please Login</h1>
           <button>
-            <Link to="/login">Login</Link>
+            <Link to="/account">Login</Link>
           </button>
         </div>
       ) : (
