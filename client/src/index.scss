@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+$white-color: #f3f3f3;
+$green-color: #5ec576;
+$text-color: #4d4f4a;
+
+body {
+  background-color: $white-color;
+}
+
+// Navbar
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  text-transform: uppercase;
+  background-color: #f3f3f3;
+
+  a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+
+    &:hover {
+      color: #5d5d5d;
+    }
+  }
+
+  .navigation-left {
+    font-size: 0.9rem;
+  }
+  .navigation-right {
+    display: flex;
+    gap: 5rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+
+    #open-btn {
+      background-color: #5ec576;
+      border-radius: 10px;
+      padding: 0.2rem;
+    }
+  }
+}
+
+// Main
+
+.main {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+
+  .first-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+    gap: 4rem;
+
+    .first-content-info {
+      text-align: center;
+      color: #4d4f4a;
+      font-size: 1.3rem;
+
+      button {
+        background-color: #5ec576;
+        border-radius: 10px;
+        padding: 0.6rem;
+        font-size: 1.5rem;
+        border: 0;
+        transition: 0.3s;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  img {
+    width: 400px;
+  }
+
+  .second-content {
+    margin-top: 5rem;
+    margin-left: 2rem;
+    #align-center {
+      text-align: center;
+      color: #4d4f4a;
+    }
+  }
+}
+
+.cards {
+  align-items: center;
+  max-width: 100%;
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .card-content {
+      .card-text {
+        transition: 0.2s;
+        color: $green-color;
+
+        &:hover {
+          letter-spacing: 3px;
+        }
+      }
+      p {
+        font-size: 1.1rem;
+        transition: 0.5s;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+    }
+
+    img {
+      width: 400px;
+    }
+  }
+}
+
+// Footer
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  background-color: $green-color;
+
+  .footer-text {
+    padding: 1.5rem;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    transition: 0.1s;
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+// Main-Repsonsive
+
+@media only screen and (max-width: 750px) {
+  .navbar {
+    flex-direction: column;
+    .navigation-right {
+      margin-top: 2rem;
+    }
+  }
+
+  .first-content {
+    flex-direction: column;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .navbar {
+    .navigation-right {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+
+  body {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Open-account
+
+.open-account {
+  margin-top: 5rem;
+  text-align: center;
+
+  .form-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5rem;
+
+    label {
+      font-size: 1.2rem;
+    }
+
+    input {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 0;
+      text-align: center;
+    }
+  }
+
+  button {
+    margin-top: 2rem;
+    background-color: #5ec576;
+    color: #f3f3f3;
+    border: 0;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    border-radius: 10px;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #438e55;
+    }
+  }
+
+  p {
+    margin-top: 2rem;
+
+    a {
+      color: #438e55;
+      text-decoration: none;
+
+      &:hover {
+        color: #438e55;
+      }
+    }
+  }
+}
+
+.account-created {
+  max-width: 100%;
+  display: flex;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1 {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  button {
+    background-color: $green-color;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 10px;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #438e55;
+    }
+  }
+}
+
+// Dashboard
+
+.dashboard {
+  margin: 2rem;
+  color: #4d4f4a;
+
+  .header-dashboard {
+    margin: 0rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #cccbcb;
+  }
+
+  .zero-balance {
+    span {
+      color: rgb(230, 100, 100);
+    }
+  }
+
+  .balance {
+    span {
+      color: #438e55;
+    }
+  }
+  // Transactions
+
+  .transactions {
+    margin-top: 1.5rem;
+    background-color: #ffffff;
+    width: 100%;
+    height: 350px;
+    overflow-y: scroll;
+    border-radius: 10px;
+
+    .mov {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem;
+      text-align: center;
+      border-bottom: 1px solid gray;
+
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .log-out {
+    font-size: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: right;
+
+    svg {
+      color: black;
+      transition: 0.3s;
+      &:hover {
+        color: #cccbcb;
+      }
+    }
+  }
+}
+
+#loan-type {
+  color: #438e55;
+}
+
+#transfer-type {
+  color: rgb(230, 100, 100);
+}
+
+// Options
+
+.options {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+
+  button {
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    width: 200px;
+    border: 0;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  #box {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    border-radius: 10px;
+    margin: 1rem;
+  }
+
+  .loan {
+    .loan-option {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+  }
+
+  .option-btn {
+    background-color: #4d4f4a;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .transfer-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+
+    .form-control-transfer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin: 0.5rem;
+    }
+  }
+
+  .delete-option {
+    .delete-option-text {
+      font-size: 1.2rem;
+    }
+
+    .delete-icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 2rem;
+
+      a {
+        color: #4d4f4a;
+      }
+
+      svg {
+        transition: 0.3s;
+      }
+
+      svg:hover {
+        color: #438e55;
+      }
+    }
+  }
+}
+
+// Dashboard Responsive
+
+@media only screen and (max-width: 720px) {
+  .header-dashboard {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mov {
+    flex-direction: column;
+  }
+}
+
+.loading-container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// About-Us
+
+.about-us {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 4rem;
+
+  span {
+    font-size: 2rem;
+  }
+
+  .about-cards {
+    margin-top: 5rem;
+    display: flex;
+    text-align: center;
+    gap: 5rem;
+    .about-card {
+      h1 {
+        margin: 2rem;
+      }
+      text-align: center;
+      // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      // box-shadow: rgb(36, 124, 86) 0px 20px 30px -10px;
+      width: 350px;
+      height: 300px;
+      border-radius: 10px;
+
+      svg {
+        margin-top: 2rem;
+        font-size: 4rem;
+        color: #5ec576;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .about-us {
+    .Typewriter__wrapper {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+  .about-cards {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
